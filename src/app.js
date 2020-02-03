@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import 'bulma'
 import './stylesheets/main.scss'
-import Start from './components/Common/Start'
+import Start from './components/common/Start'
 import Questions from './components/Questions'
 import Error from './components/common/Error'
 const App = () => (
