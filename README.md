@@ -1,68 +1,72 @@
-# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Project #2: Reacathon
+# Geography Genius
+
+## ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) General Assembly: Software Engineering Immersive - Project 2
+
+[Click here to open the application on Heroku](https://geography-genius.herokuapp.com/)
 
 ## Overview
 
-The second project is to **build a React application** that consumes a **public API**.
+This was a quiz about country capitals and flags created after 2 days of pair coding with a [course mate](https://github.com/Tbanks9). We built it in React and used Axios requests to a third-party API called [Rest Countries](https://restcountries.eu/) to collect the quiz’s data. I wrote the majority of the logic using JavaScript while my partner focused on the visuals and animations. I felt we worked very well together, creating a successful application despite extremely limited time and the difficulty of building a quiz using an API that was not designed for that purpose.
 
-### Technical Requirements
+![hero](src/assets/screenshots/home.png)
 
-Your app must:
+## Goal
+To create an application with React that interacts with a third-party API. 
 
-* **Consume a public API** – this could be anything but it must make sense for your project.
-* **Have several components** - At least one classical and one functional.
-* **The app should include a router** - with several "pages".
-* **Include wireframes** - that you designed before building the app.
-* Have **semantically clean HTML** - you make sure you write HTML that makes structural sense rather than thinking about how it might look, which is the job of CSS.
-* **Be deployed online** and accessible to the public.
+### Timeframe
+2 days
 
----
+### Technologies used
+JavaScript, React, Axios, Sass, Bulma, Animate.css, Google Fonts, Git, Yarn, GitHub, Insomnia.
 
-## Necessary Deliverables
+## Instructions
+Test your geography knowledge in our quiz based on country capitals and flags. You will be given 10 random questions in the following formats:
 
-* A **working application**, hosted somewhere on the internet
-* A **link to your hosted working app** in the URL section of your Github repo
-* A **git repository hosted on Github**, with a link to your hosted project, and frequent commits dating back to the _very beginning_ of the project
+- Which country does this flag belong to?
 
----
+![country](src/assets/screenshots/country.png)
 
-## Suggested Ways to Get Started
+- What is the flag of this country?
 
-* **Don’t hesitate to write throwaway code** to solve short term problems.
-* **Read the docs for whatever technologies / frameworks / APIs you use**.
-* **Write DRY code**.
-* **Be consistent with your code style.**
-* **Commit early, commit often.** Don’t be afraid to break something because you can always go back in time to a previous version.
-* **Keep user stories small and well-defined**, and remember – user stories focus on what a user needs, not what development tasks need accomplishing.
-* **Write code another developer wouldn't have to ask you about**. Do your naming conventions make sense? Would another developer be able to look at your app and understand what everything is?
-* **Make it all well-formatted.** Are you indenting, consistently? Can we find the start and end of every div, curly brace, etc?
-* **Comment your code.** Will someone understand what is going on in each block or function? Even if it's obvious, explaining the what & why means someone else can pick it up and get it.
-* **Write pseudocode before you write actual code.** Thinking through the logic of something helps.
+![flag](src/assets/screenshots/flag.png)
 
----
+- What is the capital of this country?
 
-## Useful Resources
+![capital](src/assets/screenshots/capital.png)
 
-* [List of open APIs](https://any-api.com/)
+Once finished, enter your name to add your score to the leaderboard.
 
-* [A collective list of free APIs for use in software and web development.](https://github.com/public-apis/public-apis)
+![leaderboard](src/assets/screenshots/leaderboard.png)
 
-* [18 Fun APIs For Your Next Project - Victoria Bergquist - Medium](https://medium.com/@vicbergquist/18-fun-apis-for-your-next-project-8008841c7be9)
+## Development
 
-* [Best Free APIs of 2019](https://rapidapi.com/collection/best-free-apis?utm_source=google&utm_medium=cpc&utm_campaign=1757574668_67679208454&utm_term=%2Bfree%20%2Bapis_b&utm_content=1t1&gclid=CjwKCAiAgqDxBRBTEiwA59eENwNUVqPD-v79Cgwl3EWtcRuMZlVGOCxAf5RcH74ZUM6cMKp6o5FZRxoCpVgQAvD_BwE)
+We built the application in React and used Axios request to a third-party API called [Rest Countries](https://restcountries.eu/) to generate the data for this quiz.
 
+The quiz consisted of ten questions, each randomly choosing one of three question types mentioned above. The quiz would then randomly choose one correct answer and three incorrect answers from the API to generate a question. For example, it might randomly select the country capitals question type and then randomly choose France from the database of countries, accessing the capital city data for the correct answer of Paris. It would do the same for three more random countries, checking to not produce duplicates, producing a total of four possible capital city answers, only one of which is correct.
 
-These are just a few examples of lists of free APIs you could use, there are hundreds out there!
+We included measures to prevent the player from selecting the correct answer after they had already selected an incorrect answer to prevent cheating. Correct answer were indicated by a bobbing green animation and incorrect answers by a shaking red one.
 
----
+## Challenges
 
-## Project Feedback + Evaluation
+The biggest challenge of this application was the very short timeframe we were given to complete the project. It was also our first project using React so there was a learning curve to contend with. The API we were using was just a simple database that was not designed for quizes, resulting in us having to write a lot more code than we might have needed to otherwise. Each question type needed to have its own customised JavaScript, HTML, and CSS as each operated differently.
 
-* __Project Workflow__: Did you complete the user stories, wireframes, task tracking as specified above? Did you use source control as expected for the phase of the program you’re in (detailed above)?
+## Wins
 
-* __Technical Requirements__: Did you deliver a project that met all the technical requirements? Given what the class has covered so far, did you build something that was reasonably complex?
+This was my first group project and I felt that we worked really well together. We played to our strengths: I came up with most of the game logic in JavaScript while my partner made it look beautiful with CSS and animations.
 
-* __Creativity__: Did you added a personal spin or creative element into your project submission? Did you deliver something of value to the end user (not just a login button and an index page)?
+## Future features
 
-* __Code Quality__: Did you follow code style guidance and best practices covered in class, such as spacing, modularity, and semantic naming? Did you comment your code as your instructors as we have in class?
+Due to the very limited timeframe and the need for each question format to have its own unique code, there were several question formats that we did not have time to do:
+- What country is the pin on this map pointing to?
+- Which country has the highest population, land area, GDP, etc
+- Which country has these neighbours?
 
-* __Problem Solving__: Are you able to defend why you implemented your solution in a certain way? Can you demonstrated that you thought through alternative implementations? _(Note that this part of your feedback evaluation will take place during your one-on-one code review with your instructors, after you've completed the project.)_
+We also considered ways of making the quiz more difficult such as creating preset questions that grouped similar looking flags together or filtering out well known countries from the possible answers.
+
+## Key learnings
+
+I learned a lot about React during this project (by making a lot of mistakes). I also learned it was possible to create something fairly polished and professional-looking in 2 days.
+
+## Authors
+- Nicolas Dolan
+- [Tim Banks](https://github.com/Tbanks9)
